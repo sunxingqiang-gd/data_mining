@@ -35,10 +35,3 @@ org_price2 <- substr(org_price1,regexpr("<del>",org_price1)+5,nchar(org_price1)-
 result <- data.frame(place=place2,goods_name=goods_name2,goods_text=goods_text2,price=price2,org_price=org_price2)
 
 head(result)
-goods_name <- web[grep("goods-name",web)]
-head(goods_name)
-#">【梅林】原味沙县美食
-#+2是因为匹配到的">往后+2个坐标，字符总长度减去 < 1个字符
-store_name <- substr(goods_name,regexpr("\">",goods_name)+2,nchar(goods_name)-4)
-
-
